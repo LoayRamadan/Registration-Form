@@ -1,0 +1,67 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    background-image: -moz-element("H:\pdf el gam3a\MIS 3RD YEAR\web design\html\NODERN.jpg")
+}
+.LLL1{
+    padding: 15px;
+    margin: auto;
+    background-color: khaki;
+    
+}
+.B1{
+    padding: 10px;
+    display: block;
+    border-radius:4px ;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+
+}
+
+
+.LLL1{
+  margin: 0 auto;
+  width: 300px;
+  border-radius: 10px;
+  position: relative;
+}
+
+
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.LLL1::after, .LLL1::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+.LLL1::before{
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+@keyframes spin{
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
+}
+
+
+
